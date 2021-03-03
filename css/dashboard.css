@@ -1,0 +1,88 @@
+/* general styling */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --clr-p: rgb(64, 141, 212);
+    --clr-s: #4b830d;
+}
+
+.wrapper{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* navbar */
+.navbar{
+    background: var(--clr-p);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+}
+
+/* Hamburger menu */
+.navbar .menu{
+    position: relative;
+}
+
+.navbar .fa-bars{
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 1.9em;
+    cursor: pointer;
+}
+
+.navbar .fa-times{
+    color: #fff;
+    font-size: 1.9em;
+    margin-left: 1.4em;
+    top: -.5em;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+.navbar .fa-times:hover,
+.navbar .fa-bars:hover{
+    color: var(--clr-s);
+}
+
+/* Menu side drawer */
+.navigation-drawer{
+    background: rgb(64, 141, 212);
+    position: absolute;
+    top: 5em;
+    height: 90vh;
+    width: 35vh;
+    left: -.1em;
+    display: none;
+    z-index: 2;
+}
+
+.navigation-drawer li{
+    list-style: none;
+    margin: 3em auto;
+    margin-left: 2em;
+}
+.navigation-drawer a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;  
+}
+
+.navigation-drawer a:hover{
+    color: var(--clr-s);
+}
+
+.navbar .title{
+    color: #fff;
+    font-size: 2em;
+    margin-right: 2em;
+}

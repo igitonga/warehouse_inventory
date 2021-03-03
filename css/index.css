@@ -1,0 +1,71 @@
+/* general styling */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --clr-p: rgb(64, 141, 212);
+    --clr-s: #4b830d;
+}
+
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(rgba(64, 141, 212,0.8),rgba(159, 195, 212,0.8)),url(../images/background.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* login form */
+.login_container{
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.login_container .login_icon{
+    width: 120px;
+    margin: 3em auto;
+    display: block;
+}
+
+.login_container .email, .password{
+    padding: .5em;
+    font-size: 1em;
+    width: 18rem;
+    margin-top: 1em;
+}
+
+.login_container .btnLogin{
+    font-size: 1em;
+    padding: .6em;
+    width: 18rem;
+    margin-top: 1.2em;
+    background-color: #4b830d;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.login_container .btnLogin:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+
+.login_container .forgotPassword{
+    margin-top: 1em;
+    text-align: right;
+    color: var(--clr-p);
+}
+
+.login_container .forgotPassword:hover{
+    cursor: pointer;
+    color: var(--clr-s);
+}

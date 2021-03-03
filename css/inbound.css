@@ -1,0 +1,117 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+/* General */
+:root{
+    --clr-p: rgb(64, 141, 212);
+    --clr-s: #4b830d;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2{
+    margin-left: 1em;
+    font-size: 2rem;
+}
+
+.form_container{
+    width: 50%;
+    margin: 3em auto;
+    padding: 2em;
+    box-shadow: 0px 5px 20px 20px #F0F8FF;
+}
+
+hr{
+    opacity: 0.4;
+}
+
+p{
+    font-weight: bold;
+}
+
+input{
+    background: #F0F8FF;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.agent_cont-title,
+.products_cont-title,
+.origin_cont-title{
+    width: 17%;
+    margin-left: .9em;
+}
+.agent_cont,
+.products_cont,
+.origin_cont{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.agent_cont-input,
+.products_cont-input,
+.origin_cont-input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+    width: 55%;
+}
+
+ .label{
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+
+/* Agent section */
+#phone{
+    width: 200px;
+}
+
+/* product section */
+.products_cont-input{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.products_cont-input .product_category{
+    background: #F0F8FF;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+/* origin section */
+.origin_cont-input_a{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: .5em;
+    margin-top: .5em;
+}
+
+/* Button */
+.btnInbound{
+    font-size: 1em;
+    padding: .6em;
+    width: 18rem;
+    margin-top: 1.2em;
+    margin-left: 2em;
+    background-color: #4b830d;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btnInbound:hover{
+    cursor: pointer;
+    opacity: .9;
+}
