@@ -3,6 +3,9 @@
 include ('./index.php');
 
 $active_id = $_SESSION['active_id'];
+$first_name = $_SESSION['first_name'];
+$last_name = $_SESSION['last_name'];
+$employee_name = $first_name." ".$last_name;
 
 function outboundEntry($con, $fullname, $email, $phone, $prod_cat, $units, $bus_name, $location, $office_ph, $employee_id, $logistics){
 
@@ -18,6 +21,21 @@ function outboundEntry($con, $fullname, $email, $phone, $prod_cat, $units, $bus_
     else{
         echo mysqli_error($con);
     }
+}
+
+function inventoryEntry($con, $agent_name, $product_category, $units, $employee, $type){
+
+  $sql2 = "INSERT INTO `inventory`(`agent_name`, `product_category`, `units`, `employee`, `type`, `date`) VALUES('$agent_name', ' $product_category',
+          '$units', '$employee', '$type', Now())";
+  $exec = mysqli_query($con, $sql2);
+  
+  if($exec){
+    header('Location: ../dashboard.php');
+    }
+    else{
+        echo mysqli_error($con);
+    }
+
 }
 
 // button functionality
@@ -39,6 +57,7 @@ if(isset($_POST['btnOutbound'])){
       $logistics = "outbound";
 
       outboundEntry($connection, $fullname, $email, $phone, $product_category, $units, $business_name, $location, $office_no, $employee_id, $logistics);
+      inventoryEntry($connection, $fullname, $product_category, $units, $employee_name, $logistics);
     }  
     else{
        // echo "File is not found";

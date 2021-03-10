@@ -17,7 +17,7 @@
                   <i class="fas fa-times" id="cancelmenu"></i>
               </div>
               <ul class="navigation-drawer" id="navigation-drawer">
-                  <li><a href="">Search</a></li>
+                  <li><a href="search.html">Search</a></li>
                   <li><a href="inbound.php">Inbound</a></li>
                   <li><a href="outbound.php">Outbound</a></li>
                   <li><a href="backend/logout.php">Log Out</a></li>
@@ -31,23 +31,26 @@
       <table class="table table-hover">
         <thead>
           <tr>
+          <th scope="col">#</th>
             <th scope="col">Agent's Name</th>
             <th scope="col">Product Category</th>
             <th scope="col">Units</th>
             <th scope="col">Employee's Name</th>
+            <th scope="col">Type</th>
             <th scope="col">Date</th>
           </tr>
         </thead>
         <tbody>
         <?php 
             
-            //include('backend/db_connection.php');
+            include('backend/db_connection.php');
 
-          // $sql = mysqli_query($connection,  "SELECT `id`, `first_name`, `last_name` FROM `users`");
+            $sql = mysqli_query($connection,  "SELECT `id`, `agent_name`, `product_category`, `units`, `employee`, `type`, `date` FROM `inventory`");
 
-            // while($row = mysqli_fetch_assoc($sql)){
-            //     echo "<tr><td>". $row['id'] ."</td><td>". $row['first_name'] ."</td><td>".  $row['last_name'] ."</td></tr>";
-            // }
+            while($row = mysqli_fetch_assoc($sql)){
+                echo "<tr><td>". $row['id'] ."</td><td>". $row['agent_name'] ."</td><td>".  $row['product_category'] ."</td>
+                <td>".  $row['units'] ."</td><td>".  $row['employee'] ."</td><td>".  $row['type'] ."</td><td>".date("d-m-Y",strtotime($row['date']))."</td></tr>";
+            }
 
             ?>
         </tbody>
