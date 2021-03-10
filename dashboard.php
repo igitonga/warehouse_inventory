@@ -17,7 +17,7 @@
                   <i class="fas fa-times" id="cancelmenu"></i>
               </div>
               <ul class="navigation-drawer" id="navigation-drawer">
-                  <li><a href="search.html">Search</a></li>
+                  <li><a href="search.php">Search</a></li>
                   <li><a href="inbound.php">Inbound</a></li>
                   <li><a href="outbound.php">Outbound</a></li>
                   <li><a href="backend/logout.php">Log Out</a></li>
