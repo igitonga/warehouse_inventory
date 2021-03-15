@@ -39,13 +39,11 @@
                         <label for="plan" class="label">Product Category</label>
                         <select name="product_category" class="product_category">
                             <option value="" disabled selected hidden>Choose a category...</option>
-                            <option value="Fenty Beauty">Fenty Beauty</option>
-                            <option value="Orvis">Orvis</option>
-                            <option value="Ikea">Ikea</option>
-                            <option value="Swarovski">Swarovski</option>
-                            <option value="Target">Target</option>
-                            <option value="Dove">Dove</option>
-                            <option value="Patagonia">Patagonia</option>
+                            <option value="Pishori">Pishori</option>
+                            <option value="Sindano">Sindano</option>
+                            <option value="Biryani">Biryani</option>
+                            <option value="Basmati">Basmati</option>
+                            <option value="Brown">Brown</option>
                         </select>
                     </div>
                     <div class="b2">
